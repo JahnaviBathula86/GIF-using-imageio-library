@@ -1,0 +1,44 @@
+# Creating GIFs using imageio
+
+This is a simple Python project that demonstrates how to create GIFs from a sequence of images using the [imageio](https://imageio.readthedocs.io/en/stable/) library.
+
+## Features
+
+- Combine multiple images into an animated GIF
+- Easy-to-use script
+- Customizable frame duration
+
+## Requirements
+
+- Python 3.x
+- imageio
+
+## Installation
+
+Install the required library with:
+```bash
+pip3 install imageio
+```
+
+## Usage
+
+1. Place your images (e.g., `image1.png`, `image2.png`, ...) in the project folder.
+2. Edit the script to list your image filenames in order.
+3. Run the script:
+   ```bash
+   python create_gif.py
+   ```
+
+## Example
+
+```python
+import imageio
+
+images = ['image1.png', 'image2.png', 'image3.png']
+frames = [imageio.imread(img) for img in images]
+imageio.mimsave('output.gif', frames, duration=0.5)
+```
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
